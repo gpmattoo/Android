@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NotesApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="enter_text">Please enter Item:</string>
+    <string name="save_item">Save Item on File</string>
+    <string name="saveClickedOnDatabase">Save on Db</string>
+    <string name="delete_db">Delete Notes in Db</string>
+
+</resources>
