@@ -65,7 +65,6 @@ public class NotesDataSource {
 	      notes.add(note);
 	      cursor.moveToNext();
 	    }
-	    // make sure to close the cursor
 	    cursor.close();
 	    return notes;
 	  }

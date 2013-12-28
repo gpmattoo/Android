@@ -7,5 +7,6 @@
     <string name="save_item">Save Item on File</string>
     <string name="saveClickedOnDatabase">Save on Db</string>
     <string name="delete_db">Delete Notes in Db</string>
+    <string name="edit_message">Please enter item</string>
 
 </resources>

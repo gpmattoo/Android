@@ -10,19 +10,34 @@
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/enter_text" />
 
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textView1"
+        android:layout_marginTop="8dp" >
+    
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:lines="5"
+        android:hint="@string/edit_message">
+    </EditText>
+    </ScrollView>
+    
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_alignRight="@+id/editText1"
-        android:layout_marginRight="24dp"
+        android:layout_alignBottom="@+id/scrollView1"
         android:onClick="onClick"
+        android:layout_marginTop="8dp"
         android:text="@string/saveClickedOnDatabase" />
 
     <Button
@@ -30,41 +45,27 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="82dp"
-        android:layout_toLeftOf="@+id/button2"
+        android:layout_alignBottom="@+id/scrollView1"
+        android:layout_toRightOf="@+id/button2"
         android:onClick="onClick"
+        android:layout_marginTop="8dp"
         android:text="@string/delete_db" />
 
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button3"
-        android:layout_alignLeft="@+id/button3"
-        android:onClick="saveClicked"
+        android:layout_below="@+id/button3"
+        android:onClick="onClick"
         android:text="@string/save_item" />
 
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_alignParentTop="true"
-        android:ems="10"
-        android:lines="5"
-        android:scrollHorizontally="true" >
-
-        <requestFocus />
-    </EditText>
+    
 
     <ListView
         android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button2"
-        android:layout_alignRight="@+id/button2"
-        android:layout_below="@+id/editText1" >
+        android:layout_below="@+id/scrollView1" >
 
     </ListView>
 
