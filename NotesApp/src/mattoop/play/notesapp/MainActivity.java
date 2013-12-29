@@ -44,29 +44,7 @@ public class MainActivity extends ListActivity {
 			note = notesDataSource.createNotes(editText.getText().toString());
 			adapter.add(note);
 			break;
-			/*
-			try {
-				InputStream in = openFileInput("saveItem.txt");
-				if (in != null) {
-					InputStreamReader tmp = new InputStreamReader(in);
-					BufferedReader reader = new BufferedReader(tmp);
-					String str;
-					StringBuilder buf = new StringBuilder();
-					while ((str = reader.readLine()) != null) {
-						buf.append(str + "n");
-					}
-					in.close();
-					note = notesDataSource.createNotes(buf.toString());
-					adapter.add(note);
-					break;
-				}
-			} catch (java.io.FileNotFoundException e) {
-				// that's OK, we probably haven't created it yet
-			} catch (Throwable t) {
-				Toast.makeText(this, "Exception: " + t.toString(),
-						Toast.LENGTH_LONG).show();
-			}
-			*/
+			
 		case R.id.button3:
 			if (getListAdapter() != null && getListAdapter().getCount() > 0) {
 				note = (Notes) getListAdapter().getItem(0);
@@ -101,21 +79,6 @@ public class MainActivity extends ListActivity {
 		return true;
 	}
 
-	/*
-	public void saveClicked(View v) {
-		try {
-			OutputStreamWriter out = new OutputStreamWriter(openFileOutput(
-					"saveItem.txt", 0));
-			out.write(editText.getText().toString());
-			out.close();
-			Toast.makeText(this, "The contents are saved in the file.",
-					Toast.LENGTH_LONG).show();
-		} catch (Throwable t) {
-			Toast.makeText(this, "Exception: " + t.toString(),
-					Toast.LENGTH_LONG).show();
-		}
-	}*/
-	
 	public void readFileInEditor() {
 		try {
 			InputStream in = openFileInput("saveItem.txt");

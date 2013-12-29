@@ -20,53 +20,57 @@
         android:layout_height="match_parent"
         android:layout_below="@id/textView1"
         android:layout_marginTop="8dp" >
-    
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:lines="5"
-        android:hint="@string/edit_message">
-    </EditText>
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/edit_message"
+            android:lines="5" >
+        </EditText>
     </ScrollView>
-    
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/scrollView1"
-        android:onClick="onClick"
-        android:layout_marginTop="8dp"
-        android:text="@string/saveClickedOnDatabase" />
-
-    <Button
-        android:id="@+id/button3"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/scrollView1"
-        android:layout_toRightOf="@+id/button2"
-        android:onClick="onClick"
-        android:layout_marginTop="8dp"
-        android:text="@string/delete_db" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button3"
-        android:onClick="onClick"
-        android:text="@string/save_item" />
-
-    
 
     <ListView
         android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/scrollView1" >
-
     </ListView>
+
+    <TableRow
+        android:id="@+id/tableRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/scrollView1" >
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:gravity="center_horizontal"
+            android:onClick="onClick"
+            android:text="@string/saveClickedOnDatabase" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".3"
+            android:gravity="center_horizontal"
+            android:onClick="onClick"
+            android:text="@string/delete_db" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight=".3"
+            android:gravity="center_horizontal"
+            android:onClick="onClick"
+            android:text="@string/save_item" />
+    </TableRow>
 
 </RelativeLayout>
