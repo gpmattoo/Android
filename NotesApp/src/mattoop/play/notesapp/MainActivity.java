@@ -42,14 +42,18 @@ public class MainActivity extends ListActivity {
 		case R.id.button2:
 			editText = (EditText) findViewById(R.id.editText1);
 			note = notesDataSource.createNotes(editText.getText().toString());
-			adapter.add(note);
+			if(adapter != null) {
+				adapter.add(note);
+			}
 			break;
 			
 		case R.id.button3:
 			if (getListAdapter() != null && getListAdapter().getCount() > 0) {
 				note = (Notes) getListAdapter().getItem(0);
 				notesDataSource.deleteUserNote(note);
-				adapter.remove(note);
+				if(adapter != null) {
+					adapter.remove(note);
+				}
 			}
 			break;
 		
